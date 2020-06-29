@@ -53,19 +53,38 @@ function OpenCloakroomMenu()
 
 	local elements = {
 		{label = _U('citizen_wear'), value = 'citizen_wear'},
-		{label = _U('bullet_wear'), uniform = 'bullet_wear'},
-		{label = _U('gilet_wear'), uniform = 'gilet_wear'},
-		{label = _U('police_wear'), uniform = grade}
 	}
 
-	if Config.EnableCustomPeds then
-		for k,v in ipairs(Config.CustomPeds.shared) do
-			table.insert(elements, {label = v.label, value = 'freemode_ped', maleModel = v.maleModel, femaleModel = v.femaleModel})
-		end
-
-		for k,v in ipairs(Config.CustomPeds[grade]) do
-			table.insert(elements, {label = v.label, value = 'freemode_ped', maleModel = v.maleModel, femaleModel = v.femaleModel})
-		end
+	if grade == 'aspirant' then
+		table.insert(elements, {label = 'Noodhulp Kort (Aspirant)', value = 'asp_nh_kort'})
+		table.insert(elements, {label = 'Noodhulp Lang (Aspirant)', value = 'asp_nh_lang'})
+	elseif grade == 'surveillant' then
+		table.insert(elements, {label = 'Noodhulp Kort', value = 'nh_kort'})
+		table.insert(elements, {label = 'Noodhulp Lang', value = 'nh_lang'})
+	elseif grade == 'agent' then
+		table.insert(elements, {label = 'Noodhulp Kort', value = 'nh_kort'})
+		table.insert(elements, {label = 'Noodhulp Lang', value = 'nh_lang'})
+	elseif grade == 'hoofdagent' then
+		table.insert(elements, {label = 'Noodhulp Kort', value = 'nh_kort'})
+		table.insert(elements, {label = 'Noodhulp Lang', value = 'nh_lang'})
+	elseif grade == 'brigadier' then
+		table.insert(elements, {label = 'Noodhulp Kort', value = 'nh_kort'})
+		table.insert(elements, {label = 'Noodhulp Lang', value = 'nh_lang'})
+	elseif grade == 'inspecteur' then
+		table.insert(elements, {label = 'Noodhulp Kort', value = 'nh_kort'})
+		table.insert(elements, {label = 'Noodhulp Lang', value = 'nh_lang'})
+	elseif grade == 'hoofdinspecteur' then
+		table.insert(elements, {label = 'Noodhulp Kort', value = 'nh_kort'})
+		table.insert(elements, {label = 'Noodhulp Lang', value = 'nh_lang'})
+	elseif grade == 'commissaris' then
+		table.insert(elements, {label = 'Noodhulp Kort', value = 'nh_kort'})
+		table.insert(elements, {label = 'Noodhulp Lang', value = 'nh_lang'})
+	elseif grade == 'hoofdcommissaris' then
+		table.insert(elements, {label = 'Noodhulp Kort', value = 'nh_kort'})
+		table.insert(elements, {label = 'Noodhulp Lang', value = 'nh_lang'})
+	elseif grade == 'boss' then
+		table.insert(elements, {label = 'Noodhulp Kort', value = 'nh_kort'})
+		table.insert(elements, {label = 'Noodhulp Lang', value = 'nh_lang'})
 	end
 
 	ESX.UI.Menu.CloseAll()

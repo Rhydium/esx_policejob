@@ -1,27 +1,32 @@
 USE `es_extended`;
 
 INSERT INTO `addon_account` (name, label, shared) VALUES
-	('society_police', 'Police', 1)
+	('society_police', 'Politie', 1)
 ;
 
 INSERT INTO `datastore` (name, label, shared) VALUES
-	('society_police', 'Police', 1)
+	('society_police', 'Politie', 1)
 ;
 
 INSERT INTO `addon_inventory` (name, label, shared) VALUES
-	('society_police', 'Police', 1)
+	('society_police', 'Politie', 1)
 ;
 
 INSERT INTO `jobs` (name, label) VALUES
-	('police', 'Police')
+	('police', 'Politie')
 ;
 
 INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_female) VALUES
-	('police',0,'recruit','Recruit',20,'{}','{}'),
-	('police',1,'officer','Officer',40,'{}','{}'),
-	('police',2,'sergeant','Sergeant',60,'{}','{}'),
-	('police',3,'lieutenant','Lieutenant',85,'{}','{}'),
-	('police',4,'boss','Chief',100,'{}','{}')
+	('police',0,'aspirant','Aspirant',0,'{}','{}'),
+	('police',1,'surveillant','Surveillant',0,'{}','{}'),
+	('police',2,'agent','Agent',0,'{}','{}'),
+	('police',3,'hoofdagent','Hoofdagent',0,'{}','{}'),
+	('police',4,'brigadier','Chief',0,'{}','{}'),
+    ('police',5,'inspecteur','Inspecteur',0,'{}','{}'),
+    ('police',6,'hoofdinspecteur','Hoofdinspecteur',0,'{}','{}'),
+    ('police',7,'commissaris','Commissaris',0,'{}','{}'),
+    ('police',8,'hoofdcommissaris','Hoofdcommissaris',0,'{}','{}'),
+    ('police',9,'boss','Eerste Hoofdcommissaris',0,'{}','{}')
 ;
 
 CREATE TABLE `fine_types` (
