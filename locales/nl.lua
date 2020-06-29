@@ -97,9 +97,8 @@ Locales['nl'] = {
     ['traffic_interaction'] = 'interaction Traffic',
     ['cone'] = 'cone',
     ['barrier'] = 'barrier',
-    ['spikestrips'] = 'spikestrips',
     ['box'] = 'box',
-    ['cash'] = 'box of cash',
+    ['fence'] = 'PD Hek'
     -- ID Menu
     ['name'] = 'name: %s',
     ['job'] = 'job: %s',

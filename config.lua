@@ -82,233 +82,213 @@ Config.PoliceStations = {
 }
 
 Config.AuthorizedWeapons = {
-	recruit = {
-		{weapon = 'WEAPON_APPISTOL', components = {0, 0, 1000, 4000, nil}, price = 10000},
+	aspirant = {
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
-		{weapon = 'WEAPON_STUNGUN', price = 1500},
-		{weapon = 'WEAPON_FLASHLIGHT', price = 80}
+		{weapon = 'WEAPON_STUNGUN', price = 0},
+		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
+		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0}
 	},
 
-	officer = {
-		{weapon = 'WEAPON_APPISTOL', components = {0, 0, 1000, 4000, nil}, price = 10000},
-		{weapon = 'WEAPON_ADVANCEDRIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 50000},
+	surveillant = {
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
-		{weapon = 'WEAPON_STUNGUN', price = 500},
-		{weapon = 'WEAPON_FLASHLIGHT', price = 0}
+		{weapon = 'WEAPON_STUNGUN', price = 0},
+		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
+		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 	},
 
-	sergeant = {
-		{weapon = 'WEAPON_APPISTOL', components = {0, 0, 1000, 4000, nil}, price = 10000},
-		{weapon = 'WEAPON_ADVANCEDRIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 50000},
-		{weapon = 'WEAPON_PUMPSHOTGUN', components = {2000, 6000, nil}, price = 70000},
+	agent = {
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
-		{weapon = 'WEAPON_STUNGUN', price = 500},
-		{weapon = 'WEAPON_FLASHLIGHT', price = 0}
+		{weapon = 'WEAPON_STUNGUN', price = 0},
+		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
+		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
+		{weapon = 'WEAPON_PISTOL', price = 0},
 	},
 
-	lieutenant = {
-		{weapon = 'WEAPON_APPISTOL', components = {0, 0, 1000, 4000, nil}, price = 10000},
-		{weapon = 'WEAPON_ADVANCEDRIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 50000},
-		{weapon = 'WEAPON_PUMPSHOTGUN', components = {2000, 6000, nil}, price = 70000},
+	hoofdagent = {
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
-		{weapon = 'WEAPON_STUNGUN', price = 500},
-		{weapon = 'WEAPON_FLASHLIGHT', price = 0}
+		{weapon = 'WEAPON_STUNGUN', price = 0},
+		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
+		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
+		{weapon = 'WEAPON_PISTOL', price = 0},
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+	},
+
+	brigadier = {
+		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
+		{weapon = 'WEAPON_STUNGUN', price = 0},
+		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
+		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
+		{weapon = 'WEAPON_PISTOL', price = 0},
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+	},
+
+	inspecteur = {
+		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
+		{weapon = 'WEAPON_STUNGUN', price = 0},
+		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
+		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
+		{weapon = 'WEAPON_PISTOL', price = 0},
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+	},
+
+	hoofdinspecteur = {
+		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
+		{weapon = 'WEAPON_STUNGUN', price = 0},
+		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
+		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
+		{weapon = 'WEAPON_PISTOL', price = 0},
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+	},
+
+	commissaris = {
+		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
+		{weapon = 'WEAPON_STUNGUN', price = 0},
+		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
+		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
+		{weapon = 'WEAPON_PISTOL', price = 0},
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+	},
+
+	hoofdcommissaris = {
+		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
+		{weapon = 'WEAPON_STUNGUN', price = 0},
+		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
+		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
+		{weapon = 'WEAPON_PISTOL', price = 0},
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
 	},
 
 	boss = {
-		{weapon = 'WEAPON_APPISTOL', components = {0, 0, 1000, 4000, nil}, price = 10000},
-		{weapon = 'WEAPON_ADVANCEDRIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 50000},
-		{weapon = 'WEAPON_PUMPSHOTGUN', components = {2000, 6000, nil}, price = 70000},
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
-		{weapon = 'WEAPON_STUNGUN', price = 500},
-		{weapon = 'WEAPON_FLASHLIGHT', price = 0}
-	}
+		{weapon = 'WEAPON_STUNGUN', price = 0},
+		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
+		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
+		{weapon = 'WEAPON_PISTOL', price = 0},
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+	},
 }
 
 Config.AuthorizedVehicles = {
 	car = {
-		recruit = {},
-
-		officer = {
-			{model = 'police3', price = 20000}
+		aspirant = {
+			{model = 'pol1', price = 0},
+			{model = 'pol2', price = 0},
+			{model = 'pol3', price = 0},
+			{model = 'pol4', price = 0},
+			{model = 'pol5', price = 0},
+			{model = 'pol6', price = 0},
 		},
 
-		sergeant = {
-			{model = 'policet', price = 18500},
-			{model = 'policeb', price = 30500}
+		surveillant = {
+			{model = 'pol1', price = 0},
+			{model = 'pol2', price = 0},
+			{model = 'pol3', price = 0},
+			{model = 'pol4', price = 0},
+			{model = 'pol5', price = 0},
+			{model = 'pol6', price = 0},
 		},
 
-		lieutenant = {
-			{model = 'riot', price = 70000},
-			{model = 'fbi2', price = 60000}
+		agent = {
+			{model = 'pol1', price = 0},
+			{model = 'pol2', price = 0},
+			{model = 'pol3', price = 0},
+			{model = 'pol4', price = 0},
+			{model = 'pol5', price = 0},
+			{model = 'pol6', price = 0},
 		},
 
-		boss = {}
-	},
+		hoofdagent = {
+			{model = 'pol1', price = 0},
+			{model = 'pol2', price = 0},
+			{model = 'pol3', price = 0},
+			{model = 'pol4', price = 0},
+			{model = 'pol5', price = 0},
+			{model = 'pol6', price = 0},
+		},
 
-	helicopter = {
-		recruit = {},
+		brigadier = {
+			{model = 'pol1', price = 0},
+			{model = 'pol2', price = 0},
+			{model = 'pol3', price = 0},
+			{model = 'pol4', price = 0},
+			{model = 'pol5', price = 0},
+			{model = 'pol6', price = 0},
+		},
 
-		officer = {},
+		inspecteur = {
+			{model = 'pol1', price = 0},
+			{model = 'pol2', price = 0},
+			{model = 'pol3', price = 0},
+			{model = 'pol4', price = 0},
+			{model = 'pol5', price = 0},
+			{model = 'pol6', price = 0},
+		},
 
-		sergeant = {},
+		hoofdinspecteur = {
+			{model = 'pol1', price = 0},
+			{model = 'pol2', price = 0},
+			{model = 'pol3', price = 0},
+			{model = 'pol4', price = 0},
+			{model = 'pol5', price = 0},
+			{model = 'pol6', price = 0},
+		},
 
-		lieutenant = {
-			{model = 'polmav', props = {modLivery = 0}, price = 200000}
+		commissaris = {
+			{model = 'pol1', price = 0},
+			{model = 'pol2', price = 0},
+			{model = 'pol3', price = 0},
+			{model = 'pol4', price = 0},
+			{model = 'pol5', price = 0},
+			{model = 'pol6', price = 0},
+		},
+
+		hoofdcommissaris = {
+			{model = 'pol1', price = 0},
+			{model = 'pol2', price = 0},
+			{model = 'pol3', price = 0},
+			{model = 'pol4', price = 0},
+			{model = 'pol5', price = 0},
+			{model = 'pol6', price = 0},
 		},
 
 		boss = {
-			{model = 'polmav', props = {modLivery = 0}, price = 100000}
+			{model = 'pol1', price = 0},
+			{model = 'pol2', price = 0},
+			{model = 'pol3', price = 0},
+			{model = 'pol4', price = 0},
+			{model = 'pol5', price = 0},
+			{model = 'pol6', price = 0},
 		}
-	}
-}
-
-Config.CustomPeds = {
-	shared = {
-		{label = 'Sheriff Ped', maleModel = 's_m_y_sheriff_01', femaleModel = 's_f_y_sheriff_01'},
-		{label = 'Police Ped', maleModel = 's_m_y_cop_01', femaleModel = 's_f_y_cop_01'}
 	},
 
-	recruit = {},
+	helicopter = {
+		aspirant = {},
 
-	officer = {},
+		surveillant = {},
 
-	sergeant = {},
+		agent = {},
 
-	lieutenant = {},
+		hoofdagent = {},
 
-	boss = {
-		{label = 'SWAT Ped', maleModel = 's_m_y_swat_01', femaleModel = 's_m_y_swat_01'}
+		brigadier = {},
+
+		inspecteur = {},
+
+		hoofdinspecteur = {},
+
+		commissaris = {},
+
+		hoofdcommissaris = {},
+
+		boss = {}
 	}
 }
 
--- CHECK SKINCHANGER CLIENT MAIN.LUA for matching elements
+--
+-- ALS JE HIER UNIFORMEN VERWIJDERD OF TOEVOEGD MOET JE DIT OOK
+-- IN DE /CLIENT/MAIN.LUA AANPASSEN ANDERS JE ZAL GEGARANDEERD ERRORS KRIJGEN!!!
+--
 Config.Uniforms = {
-	recruit = {
-		male = {
-			tshirt_1 = 59,  tshirt_2 = 1,
-			torso_1 = 55,   torso_2 = 0,
-			decals_1 = 0,   decals_2 = 0,
-			arms = 41,
-			pants_1 = 25,   pants_2 = 0,
-			shoes_1 = 25,   shoes_2 = 0,
-			helmet_1 = 46,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		},
-		female = {
-			tshirt_1 = 36,  tshirt_2 = 1,
-			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 0,   decals_2 = 0,
-			arms = 44,
-			pants_1 = 34,   pants_2 = 0,
-			shoes_1 = 27,   shoes_2 = 0,
-			helmet_1 = 45,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		}
-	},
-
-	officer = {
-		male = {
-			tshirt_1 = 58,  tshirt_2 = 0,
-			torso_1 = 55,   torso_2 = 0,
-			decals_1 = 0,   decals_2 = 0,
-			arms = 41,
-			pants_1 = 25,   pants_2 = 0,
-			shoes_1 = 25,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		},
-		female = {
-			tshirt_1 = 35,  tshirt_2 = 0,
-			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 0,   decals_2 = 0,
-			arms = 44,
-			pants_1 = 34,   pants_2 = 0,
-			shoes_1 = 27,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		}
-	},
-
-	sergeant = {
-		male = {
-			tshirt_1 = 58,  tshirt_2 = 0,
-			torso_1 = 55,   torso_2 = 0,
-			decals_1 = 8,   decals_2 = 1,
-			arms = 41,
-			pants_1 = 25,   pants_2 = 0,
-			shoes_1 = 25,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		},
-		female = {
-			tshirt_1 = 35,  tshirt_2 = 0,
-			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 7,   decals_2 = 1,
-			arms = 44,
-			pants_1 = 34,   pants_2 = 0,
-			shoes_1 = 27,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		}
-	},
-
-	lieutenant = {
-		male = {
-			tshirt_1 = 58,  tshirt_2 = 0,
-			torso_1 = 55,   torso_2 = 0,
-			decals_1 = 8,   decals_2 = 2,
-			arms = 41,
-			pants_1 = 25,   pants_2 = 0,
-			shoes_1 = 25,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		},
-		female = {
-			tshirt_1 = 35,  tshirt_2 = 0,
-			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 7,   decals_2 = 2,
-			arms = 44,
-			pants_1 = 34,   pants_2 = 0,
-			shoes_1 = 27,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		}
-	},
-
-	boss = {
-		male = {
-			tshirt_1 = 58,  tshirt_2 = 0,
-			torso_1 = 55,   torso_2 = 0,
-			decals_1 = 8,   decals_2 = 3,
-			arms = 41,
-			pants_1 = 25,   pants_2 = 0,
-			shoes_1 = 25,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		},
-		female = {
-			tshirt_1 = 35,  tshirt_2 = 0,
-			torso_1 = 48,   torso_2 = 0,
-			decals_1 = 7,   decals_2 = 3,
-			arms = 44,
-			pants_1 = 34,   pants_2 = 0,
-			shoes_1 = 27,   shoes_2 = 0,
-			helmet_1 = -1,  helmet_2 = 0,
-			chain_1 = 0,    chain_2 = 0,
-			ears_1 = 2,     ears_2 = 0
-		}
-	},
-
 	bullet_wear = {
 		male = {
 			bproof_1 = 11,  bproof_2 = 1

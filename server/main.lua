@@ -6,7 +6,6 @@ if Config.EnableESXService then
 	TriggerEvent('esx_service:activateService', 'police', Config.MaxInService)
 end
 
-TriggerEvent('esx_phone:registerNumber', 'police', _U('alert_police'), true, true)
 TriggerEvent('esx_society:registerSociety', 'police', 'Police', 'society_police', 'society_police', 'society_police', {type = 'public'})
 
 RegisterNetEvent('esx_policejob:confiscatePlayerItem')
@@ -402,7 +401,7 @@ ESX.RegisterServerCallback('esx_policejob:storeNearbyVehicle', function(source, 
 			['@job'] = xPlayer.job.name
 		}, function (rowsChanged)
 			if rowsChanged == 0 then
-				print(('esx_policejob: %s has exploited the garage!'):format(xPlayer.identifier))
+				print(('esx_policejob: %s heeft geprobeerd de garage te exploiten!'):format(xPlayer.identifier))
 				cb(false)
 			else
 				cb(true, foundNum)
