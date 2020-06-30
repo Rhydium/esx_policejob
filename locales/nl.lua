@@ -98,7 +98,7 @@ Locales['nl'] = {
     ['cone'] = 'cone',
     ['barrier'] = 'barrier',
     ['box'] = 'box',
-    ['fence'] = 'PD Hek'
+    ['fence'] = 'PD Hek',
     -- ID Menu
     ['name'] = 'name: %s',
     ['job'] = 'job: %s',
