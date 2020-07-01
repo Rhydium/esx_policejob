@@ -38,8 +38,30 @@ function setUniform(uniform, playerPed)
 		if uniformObject then
 			TriggerEvent('skinchanger:loadClothes', skin, uniformObject)
 
-			if uniform == 'bullet_wear' then
-				SetPedArmour(playerPed, 100)
+			if uniform == 'asp_nh_kort' then
+				SetPedArmour(playerPed, 35)
+			elseif uniform == 'asp_nh_lang' then
+				SetPedArmour(playerPed, 35)
+			elseif uniform == 'nh_kort' then
+				SetPedArmour(playerPed, 35)
+			elseif uniform == 'nh_lang' then
+				SetPedArmour(playerPed, 35)
+			elseif uniform == 'vp_kort' then
+				SetPedArmour(playerPed, 35)
+			elseif uniform == 'vp_lang' then
+				SetPedArmour(playerPed, 35)
+			elseif uniform == 'motor' then
+				SetPedArmour(playerPed, 35)
+			elseif uniform == 'unmarked' then
+				SetPedArmour(playerPed, 35)
+			elseif uniform == 'nh_kort_korpsleiding' then
+				SetPedArmour(playerPed, 35)
+			elseif uniform == 'nh_lang_korpsleiding' then
+				SetPedArmour(playerPed, 35)
+			elseif uniform == 'vp_kort_korpsleiding' then
+				SetPedArmour(playerPed, 35)
+			elseif uniform == 'vp_lang_korpsleiding' then
+				SetPedArmour(playerPed, 35)
 			end
 		else
 			ESX.ShowNotification(_U('no_outfit'))
@@ -59,11 +81,13 @@ function OpenCloakroomMenu()
 		table.insert(elements, {label = 'Noodhulp Kort (Aspirant)', uniform = 'asp_nh_kort'})
 		table.insert(elements, {label = 'Noodhulp Lang (Aspirant)', uniform = 'asp_nh_lang'})
 	elseif grade == 'surveillant' then -- Surveillant
-		table.insert(elements, {label = 'Noodhulp Kort', uniform = 'nh_kort'})
-		table.insert(elements, {label = 'Noodhulp Lang', uniform = 'nh_lang'})
+		table.insert(elements, {label = 'Noodhulp Kort (Surveillant)', uniform = 'asp_nh_kort'})
+		table.insert(elements, {label = 'Noodhulp Lang (Surveillant)', uniform = 'asp_nh_lang'})
 	elseif grade == 'agent' then -- Agent
 		table.insert(elements, {label = 'Noodhulp Kort', uniform = 'nh_kort'})
 		table.insert(elements, {label = 'Noodhulp Lang', uniform = 'nh_lang'})
+		table.insert(elements, {label = 'Verkeerspolitie Kort', uniform = 'vp_kort'})
+		table.insert(elements, {label = 'Verkeerspolitie Lang', uniform = 'vp_lang'})
 		table.insert(elements, {label = 'Motor', uniform = 'motor'})
 		table.insert(elements, {label = 'Ongemarkeerd', uniform = 'unmarked'})
 	elseif grade == 'hoofdagent' then -- Hoofdagent
@@ -99,24 +123,36 @@ function OpenCloakroomMenu()
 	elseif grade == 'commissaris' then -- Commissaris
 		table.insert(elements, {label = 'Noodhulp Kort', uniform = 'nh_kort'})
 		table.insert(elements, {label = 'Noodhulp Lang', uniform = 'nh_lang'})
+		table.insert(elements, {label = 'Noodhulp Kort (Beenholster)', uniform = 'nh_kort_korpsleiding'})
+		table.insert(elements, {label = 'Noodhulp Lang (Beenholster)', uniform = 'nh_lang_korpsleiding'})
 		table.insert(elements, {label = 'Verkeerspolitie Kort', uniform = 'vp_kort'})
 		table.insert(elements, {label = 'Verkeerspolitie Lang', uniform = 'vp_lang'})
+		table.insert(elements, {label = 'Verkeerspolitie Kort (Beenholster)', uniform = 'vp_kort_korpsleiding'})
+		table.insert(elements, {label = 'Verkeerspolitie Lang (Beenholster)', uniform = 'vp_lang_korpsleiding'})
 		table.insert(elements, {label = 'Motor', uniform = 'motor'})
 		table.insert(elements, {label = 'Ongemarkeerd', uniform = 'unmarked'})
 		table.insert(elements, {label = 'IBT', uniform = 'ibt'})
 	elseif grade == 'hoofdcommissaris' then -- Hoofdcommissaris
 		table.insert(elements, {label = 'Noodhulp Kort', uniform = 'nh_kort'})
 		table.insert(elements, {label = 'Noodhulp Lang', uniform = 'nh_lang'})
+		table.insert(elements, {label = 'Noodhulp Kort (Beenholster)', uniform = 'nh_kort_korpsleiding'})
+		table.insert(elements, {label = 'Noodhulp Lang (Beenholster)', uniform = 'nh_lang_korpsleiding'})
 		table.insert(elements, {label = 'Verkeerspolitie Kort', uniform = 'vp_kort'})
 		table.insert(elements, {label = 'Verkeerspolitie Lang', uniform = 'vp_lang'})
+		table.insert(elements, {label = 'Verkeerspolitie Kort (Beenholster)', uniform = 'vp_kort_korpsleiding'})
+		table.insert(elements, {label = 'Verkeerspolitie Lang (Beenholster)', uniform = 'vp_lang_korpsleiding'})
 		table.insert(elements, {label = 'Motor', uniform = 'motor'})
 		table.insert(elements, {label = 'Ongemarkeerd', uniform = 'unmarked'})
 		table.insert(elements, {label = 'IBT', uniform = 'ibt'})
 	elseif grade == 'boss' then -- Eerste Hoofdcommissaris
 		table.insert(elements, {label = 'Noodhulp Kort', uniform = 'nh_kort'})
 		table.insert(elements, {label = 'Noodhulp Lang', uniform = 'nh_lang'})
+		table.insert(elements, {label = 'Noodhulp Kort (Beenholster)', uniform = 'nh_kort_korpsleiding'})
+		table.insert(elements, {label = 'Noodhulp Lang (Beenholster)', uniform = 'nh_lang_korpsleiding'})
 		table.insert(elements, {label = 'Verkeerspolitie Kort', uniform = 'vp_kort'})
 		table.insert(elements, {label = 'Verkeerspolitie Lang', uniform = 'vp_lang'})
+		table.insert(elements, {label = 'Verkeerspolitie Kort (Beenholster)', uniform = 'vp_kort_korpsleiding'})
+		table.insert(elements, {label = 'Verkeerspolitie Lang (Beenholster)', uniform = 'vp_lang_korpsleiding'})
 		table.insert(elements, {label = 'Motor', uniform = 'motor'})
 		table.insert(elements, {label = 'Ongemarkeerd', uniform = 'unmarked'})
 		table.insert(elements, {label = 'IBT', uniform = 'ibt'})
@@ -126,7 +162,7 @@ function OpenCloakroomMenu()
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'cloakroom', {
 		title    = _U('cloakroom'),
-		align    = 'top-left',
+		align    = 'top-right',
 		elements = elements
 	}, function(data, menu)
 		cleanPlayer(playerPed)
@@ -264,7 +300,7 @@ function OpenArmoryMenu(station)
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'armory', {
 		title    = _U('armory'),
-		align    = 'top-left',
+		align    = 'top-right',
 		elements = elements
 	}, function(data, menu)
 
@@ -291,16 +327,71 @@ end
 
 function OpenPoliceActionsMenu()
 	ESX.UI.Menu.CloseAll()
+	local grade = ESX.PlayerData.job.grade_name
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'police_actions', {
 		title    = 'Police',
-		align    = 'top-left',
+		align    = 'top-right',
 		elements = {
 			{label = _U('citizen_interaction'), value = 'citizen_interaction'},
 			{label = _U('vehicle_interaction'), value = 'vehicle_interaction'},
-			{label = _U('object_spawner'), value = 'object_spawner'}
+			{label = _U('object_spawner'), value = 'object_spawner'},
+			{label = _U('quick_uniform_changer'), value = 'kleding'}
 	}}, function(data, menu)
-		if data.current.value == 'citizen_interaction' then
+		if data.current.value == 'kleding' then
+			local elements = {
+				{label = "Zwaar Vest", value = 'zwaar_vest'},
+				{label = "Steekvest", value = 'steekvest'},
+				{label = "Geel Steekvest", value = 'steekvest_geel'},
+				{label = "Geel Hesje", value = 'hesje_geel'},
+				{label = "Steekvest Uit", value = 'steekvest_uit'}
+			}
+
+			if  grade == 'hoofdagent' or
+				grade == 'brigadier' or
+				grade == 'inspecteur' or
+				grade == 'hoofdinspecteur' or
+				grade == 'commissaris' or
+				grade == 'hoofdcommissaris' or
+				grade == 'boss' 
+		 	then
+				table.insert(elements, {label = "OVD-P Hesje", value = 'hesje_ovdp'})
+		 	end
+
+			ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'kleding', {
+				title		= _U('cloakroom'),
+				align		= 'top-right',
+				elements 	= elements
+			}, function(data, menu)
+				if IsNearPoliceVehicle() then
+					if data.current.value == 'zwaar_vest' then
+						setUniform(data.current.value, GetPlayerPed(-1))
+						SetPedArmour(GetPlayerPed(-1), 45)
+					elseif data.current.value == 'steekvest' then
+						setUniform(data.current.value, GetPlayerPed(-1))
+						SetPedArmour(GetPlayerPed(-1), 25)
+					elseif data.current.value == 'steekvest_geel' then
+						setUniform(data.current.value, GetPlayerPed(-1))
+						SetPedArmour(GetPlayerPed(-1), 25)
+					elseif data.current.value == 'hesje_geel' then
+						setUniform(data.current.value, GetPlayerPed(-1))
+						SetPedArmour(GetPlayerPed(-1), 25)
+					elseif data.current.value == 'hesje_ovdp' then
+						setUniform(data.current.value, GetPlayerPed(-1))
+						SetPedArmour(GetPlayerPed(-1), 25)
+					elseif data.current.value == 'steekvest_uit' then
+						setUniform(data.current.value, GetPlayerPed(-1))
+						SetPedArmour(GetPlayerPed(-1), 0)
+					end
+				else
+					ESX.ShowNotification("~r~Je moet dicht bij een politie voertuig staan om dit te gebruiken!")
+				end
+
+			menu.close()
+		end, function(data, menu)
+			menu.close()
+		end)
+		elseif data.current.value == 'citizen_interaction' then
 			local elements = {
 				{label = _U('id_card'), value = 'identity_card'},
 				{label = _U('search'), value = 'search'},
@@ -309,7 +400,9 @@ function OpenPoliceActionsMenu()
 				{label = _U('put_in_vehicle'), value = 'put_in_vehicle'},
 				{label = _U('out_the_vehicle'), value = 'out_the_vehicle'},
 				{label = _U('fine'), value = 'fine'},
-				{label = _U('unpaid_bills'), value = 'unpaid_bills'}
+				{label = _U('unpaid_bills'), value = 'unpaid_bills'},
+				{label = _U('communityservice'), value = 'communityservice'},
+				{label = _U('jail_menu'), value = 'jail_menu'}
 			}
 
 			if Config.EnableLicenses then
@@ -318,7 +411,7 @@ function OpenPoliceActionsMenu()
 
 			ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'citizen_interaction', {
 				title    = _U('citizen_interaction'),
-				align    = 'top-left',
+				align    = 'top-right',
 				elements = elements
 			}, function(data2, menu2)
 				local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
@@ -343,6 +436,10 @@ function OpenPoliceActionsMenu()
 						ShowPlayerLicense(closestPlayer)
 					elseif action == 'unpaid_bills' then
 						OpenUnpaidBillsMenu(closestPlayer)
+					elseif action == 'communityservice' then
+						SendToCommunityService(GetPlayerServerId(closestPlayer))
+					elseif action == 'jail_menu' then
+						TriggerEvent("esx-qalle-jail:openJailMenu")
 					end
 				else
 					ESX.ShowNotification(_U('no_players_nearby'))
@@ -365,7 +462,7 @@ function OpenPoliceActionsMenu()
 
 			ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'vehicle_interaction', {
 				title    = _U('vehicle_interaction'),
-				align    = 'top-left',
+				align    = 'top-right',
 				elements = elements
 			}, function(data2, menu2)
 				local coords  = GetEntityCoords(playerPed)
@@ -430,7 +527,7 @@ function OpenPoliceActionsMenu()
 		elseif data.current.value == 'object_spawner' then
 			ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'citizen_interaction', {
 				title    = _U('traffic_interaction'),
-				align    = 'top-left',
+				align    = 'top-right',
 				elements = {
 					{label = _U('cone'), model = 'prop_roadcone02a'},
 					{label = _U('barrier'), model = 'prop_mp_barrier_02b'},
@@ -481,7 +578,7 @@ function OpenIdentityCardMenu(player)
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'citizen_interaction', {
 			title    = _U('citizen_interaction'),
-			align    = 'top-left',
+			align    = 'top-right',
 			elements = elements
 		}, nil, function(data, menu)
 			menu.close()
@@ -532,7 +629,7 @@ function OpenBodySearchMenu(player)
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'body_search', {
 			title    = _U('search'),
-			align    = 'top-left',
+			align    = 'top-right',
 			elements = elements
 		}, function(data, menu)
 			if data.current.value then
@@ -548,7 +645,7 @@ end
 function OpenFineMenu(player)
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'fine', {
 		title    = _U('fine'),
-		align    = 'top-left',
+		align    = 'top-right',
 		elements = {
 			{label = _U('traffic_offense'), value = 0},
 			{label = _U('minor_offense'),   value = 1},
@@ -576,7 +673,7 @@ function OpenFineCategoryMenu(player, category)
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'fine_category', {
 			title    = _U('fine'),
-			align    = 'top-left',
+			align    = 'top-right',
 			elements = elements
 		}, function(data, menu)
 			menu.close()
@@ -616,7 +713,7 @@ function LookupVehicle()
 
 				ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'vehicle_infos', {
 					title    = _U('vehicle_info'),
-					align    = 'top-left',
+					align    = 'top-right',
 					elements = elements
 				}, nil, function(data2, menu2)
 					menu2.close()
@@ -646,7 +743,7 @@ function ShowPlayerLicense(player)
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'manage_license', {
 			title    = _U('license_revoke'),
-			align    = 'top-left',
+			align    = 'top-right',
 			elements = elements,
 		}, function(data, menu)
 			ESX.ShowNotification(_U('licence_you_revoked', data.current.label, playerData.name))
@@ -677,12 +774,29 @@ function OpenUnpaidBillsMenu(player)
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'billing', {
 			title    = _U('unpaid_bills'),
-			align    = 'top-left',
+			align    = 'top-right',
 			elements = elements
 		}, nil, function(data, menu)
 			menu.close()
 		end)
 	end, GetPlayerServerId(player))
+end
+
+function SendToCommunityService(player)
+	ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'Community Service Menu', {
+		title = "Community Service Menu",
+	}, function (data2, menu)
+		local community_services_count = tonumber(data2.value)
+		
+		if community_services_count == nil then
+			ESX.ShowNotification('Invalid services count.')
+		else
+			TriggerServerEvent("esx_communityservice:sendToCommunityService", player, community_services_count)
+			menu.close()
+		end
+	end, function (data2, menu)
+		menu.close()
+	end)
 end
 
 function OpenVehicleInfosMenu(vehicleData)
@@ -697,7 +811,7 @@ function OpenVehicleInfosMenu(vehicleData)
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'vehicle_infos', {
 			title    = _U('vehicle_info'),
-			align    = 'top-left',
+			align    = 'top-right',
 			elements = elements
 		}, nil, function(data, menu)
 			menu.close()
@@ -720,7 +834,7 @@ function OpenGetWeaponMenu()
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'armory_get_weapon', {
 			title    = _U('get_weapon_menu'),
-			align    = 'top-left',
+			align    = 'top-right',
 			elements = elements
 		}, function(data, menu)
 			menu.close()
@@ -752,7 +866,7 @@ function OpenPutWeaponMenu()
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'armory_put_weapon', {
 		title    = _U('put_weapon_menu'),
-		align    = 'top-left',
+		align    = 'top-right',
 		elements = elements
 	}, function(data, menu)
 		menu.close()
@@ -827,7 +941,7 @@ function OpenBuyWeaponsMenu()
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'armory_buy_weapons', {
 		title    = _U('armory_weapontitle'),
-		align    = 'top-left',
+		align    = 'top-right',
 		elements = elements
 	}, function(data, menu)
 		if data.current.hasWeapon then
@@ -856,7 +970,7 @@ end
 function OpenWeaponComponentShop(components, weaponName, parentShop)
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'armory_buy_weapons_components', {
 		title    = _U('armory_componenttitle'),
-		align    = 'top-left',
+		align    = 'top-right',
 		elements = components
 	}, function(data, menu)
 		if data.current.hasComponent then
@@ -894,7 +1008,7 @@ function OpenGetStocksMenu()
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'stocks_menu', {
 			title    = _U('police_stock'),
-			align    = 'top-left',
+			align    = 'top-right',
 			elements = elements
 		}, function(data, menu)
 			local itemName = data.current.value
@@ -941,7 +1055,7 @@ function OpenPutStocksMenu()
 
 		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'stocks_menu', {
 			title    = _U('inventory'),
-			align    = 'top-left',
+			align    = 'top-right',
 			elements = elements
 		}, function(data, menu)
 			local itemName = data.current.value
@@ -1216,8 +1330,6 @@ Citizen.CreateThread(function()
 			DisableControlAction(0, 170, true) -- Animations
 			DisableControlAction(0, 167, true) -- Job
 
-			DisableControlAction(0, 0, true) -- Disable changing view
-			DisableControlAction(0, 26, true) -- Disable looking behind
 			DisableControlAction(0, 73, true) -- Disable clearing animation
 			DisableControlAction(2, 199, true) -- Disable pause screen
 
@@ -1602,4 +1714,20 @@ function ImpoundVehicle(vehicle)
 	ESX.Game.DeleteVehicle(vehicle)
 	ESX.ShowNotification(_U('impound_successful'))
 	currentTask.busy = false
+end
+
+function IsNearPoliceVehicle()
+	local pos = GetEntityCoords(GetPlayerPed(-1),true)
+	local veh = ESX.Game.GetClosestVehicle()
+	if veh ~= nil and veh ~= 0 then
+		local vehpos = GetEntityCoords(veh, false)
+		if GetDistanceBetweenCoords(pos.x, pos.y, pos.z, vehpos.x, vehpos.y, vehpos.z, true) < 3.3 then
+			for _, policeveh in pairs(Config.AuthorizedVehicles.car.shared) do
+				if GetEntityModel(veh) == GetHashKey(policeveh.model) then
+					return true
+				end
+			end
+		end
+	end
+	return false
 end

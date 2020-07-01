@@ -41,9 +41,37 @@ Config.PoliceStations = {
 			vector3(451.7, -980.1, 30.6)
 		},
 
-		Vehicles = {}, -- Tijdelijk niet ingesteld omdat we esx_policegarage gebruiken
+		Vehicles = {
+			{
+				Spawner = vector3(454.6, -1017.4, 28.4),
+				InsideShop = vector3(228.5, -993.5, -99.5),
+				SpawnPoints = {
+					{coords = vector3(438.4, -1018.3, 27.7), heading = 90.0, radius = 6.0},
+					{coords = vector3(441.0, -1024.2, 28.3), heading = 90.0, radius = 6.0},
+					{coords = vector3(453.5, -1022.2, 28.0), heading = 90.0, radius = 6.0},
+					{coords = vector3(450.9, -1016.5, 28.1), heading = 90.0, radius = 6.0}
+				}
+			},
 
-		Helicopters = {}, -- Tijdelijk niet ingesteld omdat we esx_policegarage gebruiken
+			{
+				Spawner = vector3(473.3, -1018.8, 28.0),
+				InsideShop = vector3(228.5, -993.5, -99.0),
+				SpawnPoints = {
+					{coords = vector3(475.9, -1021.6, 28.0), heading = 276.1, radius = 6.0},
+					{coords = vector3(484.1, -1023.1, 27.5), heading = 302.5, radius = 6.0}
+				}
+			}
+		}, -- Tijdelijk niet ingesteld omdat we esx_policegarage gebruiken
+
+		Helicopters = {
+			{
+				Spawner = vector3(461.1, -981.5, 43.6),
+				InsideShop = vector3(477.0, -1106.4, 43.0),
+				SpawnPoints = {
+					{coords = vector3(449.5, -981.2, 43.6), heading = 92.6, radius = 10.0}
+				}
+			}
+		}, -- Tijdelijk niet ingesteld omdat we esx_policegarage gebruiken
 
 		BossActions = {
 			vector3(448.4, -973.2, 30.6)
@@ -58,7 +86,7 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_NIGHTSTICK', price = 0},
 		{weapon = 'WEAPON_STUNGUN', price = 0},
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
-		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0}
+		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 	},
 
 	surveillant = {
@@ -82,7 +110,7 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
 	},
 
 	brigadier = {
@@ -91,7 +119,7 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
 	},
 
 	inspecteur = {
@@ -100,7 +128,7 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
 	},
 
 	hoofdinspecteur = {
@@ -109,7 +137,7 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
 	},
 
 	commissaris = {
@@ -118,7 +146,7 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
 	},
 
 	hoofdcommissaris = {
@@ -127,7 +155,7 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
 	},
 
 	boss = {
@@ -136,19 +164,34 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, 6000, 1000, 4000, 8000, nil}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
 	},
 }
 
 Config.AuthorizedVehicles = {
 	car = {
+		shared = { -- Voeg hier alle models toe waarbij je wilt dat je je uniform kunt aanpassen via F6.
+			{model = 'pol1'},
+			{model = 'pol2'},
+			{model = 'pol3'},
+			{model = 'pol4'},
+			{model = 'pol5'},
+			{model = 'pol6'},
+			{model = 'pol7'},
+			{model = 'pol8'},
+			{model = 'pol9'},
+			{model = 'pol10'},
+			{model = 'pol11'},
+			{model = 'pol12'},
+			{model = 'pol13'},
+			{model = 'pol14'},
+			{model = 'bearcat'},
+			{model = 'swift'},
+		},
+
 		aspirant = {
-			{model = 'pol1', price = 0},
-			{model = 'pol2', price = 0},
 			{model = 'pol3', price = 0},
 			{model = 'pol4', price = 0},
-			{model = 'pol5', price = 0},
-			{model = 'pol6', price = 0},
 		},
 
 		surveillant = {
@@ -167,6 +210,11 @@ Config.AuthorizedVehicles = {
 			{model = 'pol4', price = 0},
 			{model = 'pol5', price = 0},
 			{model = 'pol6', price = 0},
+			{model = 'pol7', price = 0},
+			{model = 'pol8', price = 0},
+			{model = 'pol9', price = 0},
+			{model = 'pol11', price = 0},
+			{model = 'pol12', price = 0},
 		},
 
 		hoofdagent = {
@@ -176,6 +224,15 @@ Config.AuthorizedVehicles = {
 			{model = 'pol4', price = 0},
 			{model = 'pol5', price = 0},
 			{model = 'pol6', price = 0},
+			{model = 'pol7', price = 0},
+			{model = 'pol8', price = 0},
+			{model = 'pol9', price = 0},
+			{model = 'pol10', price = 0},
+			{model = 'pol11', price = 0},
+			{model = 'pol12', price = 0},
+			{model = 'pol13', price = 0},
+			{model = 'pol14', price = 0},
+			{model = 'bearcat', price = 0},
 		},
 
 		brigadier = {
@@ -185,6 +242,15 @@ Config.AuthorizedVehicles = {
 			{model = 'pol4', price = 0},
 			{model = 'pol5', price = 0},
 			{model = 'pol6', price = 0},
+			{model = 'pol7', price = 0},
+			{model = 'pol8', price = 0},
+			{model = 'pol9', price = 0},
+			{model = 'pol10', price = 0},
+			{model = 'pol11', price = 0},
+			{model = 'pol12', price = 0},
+			{model = 'pol13', price = 0},
+			{model = 'pol14', price = 0},
+			{model = 'bearcat', price = 0},
 		},
 
 		inspecteur = {
@@ -194,6 +260,15 @@ Config.AuthorizedVehicles = {
 			{model = 'pol4', price = 0},
 			{model = 'pol5', price = 0},
 			{model = 'pol6', price = 0},
+			{model = 'pol7', price = 0},
+			{model = 'pol8', price = 0},
+			{model = 'pol9', price = 0},
+			{model = 'pol10', price = 0},
+			{model = 'pol11', price = 0},
+			{model = 'pol12', price = 0},
+			{model = 'pol13', price = 0},
+			{model = 'pol14', price = 0},
+			{model = 'bearcat', price = 0},
 		},
 
 		hoofdinspecteur = {
@@ -203,6 +278,15 @@ Config.AuthorizedVehicles = {
 			{model = 'pol4', price = 0},
 			{model = 'pol5', price = 0},
 			{model = 'pol6', price = 0},
+			{model = 'pol7', price = 0},
+			{model = 'pol8', price = 0},
+			{model = 'pol9', price = 0},
+			{model = 'pol10', price = 0},
+			{model = 'pol11', price = 0},
+			{model = 'pol12', price = 0},
+			{model = 'pol13', price = 0},
+			{model = 'pol14', price = 0},
+			{model = 'bearcat', price = 0},
 		},
 
 		commissaris = {
@@ -212,6 +296,15 @@ Config.AuthorizedVehicles = {
 			{model = 'pol4', price = 0},
 			{model = 'pol5', price = 0},
 			{model = 'pol6', price = 0},
+			{model = 'pol7', price = 0},
+			{model = 'pol8', price = 0},
+			{model = 'pol9', price = 0},
+			{model = 'pol10', price = 0},
+			{model = 'pol11', price = 0},
+			{model = 'pol12', price = 0},
+			{model = 'pol13', price = 0},
+			{model = 'pol14', price = 0},
+			{model = 'bearcat', price = 0},
 		},
 
 		hoofdcommissaris = {
@@ -221,6 +314,15 @@ Config.AuthorizedVehicles = {
 			{model = 'pol4', price = 0},
 			{model = 'pol5', price = 0},
 			{model = 'pol6', price = 0},
+			{model = 'pol7', price = 0},
+			{model = 'pol8', price = 0},
+			{model = 'pol9', price = 0},
+			{model = 'pol10', price = 0},
+			{model = 'pol11', price = 0},
+			{model = 'pol12', price = 0},
+			{model = 'pol13', price = 0},
+			{model = 'pol14', price = 0},
+			{model = 'bearcat', price = 0},
 		},
 
 		boss = {
@@ -230,6 +332,15 @@ Config.AuthorizedVehicles = {
 			{model = 'pol4', price = 0},
 			{model = 'pol5', price = 0},
 			{model = 'pol6', price = 0},
+			{model = 'pol7', price = 0},
+			{model = 'pol8', price = 0},
+			{model = 'pol9', price = 0},
+			{model = 'pol10', price = 0},
+			{model = 'pol11', price = 0},
+			{model = 'pol12', price = 0},
+			{model = 'pol13', price = 0},
+			{model = 'pol14', price = 0},
+			{model = 'bearcat', price = 0},
 		}
 	},
 
@@ -238,21 +349,37 @@ Config.AuthorizedVehicles = {
 
 		surveillant = {},
 
-		agent = {},
+		agent = {
+			{model = 'swift', price = 0}
+		},
 
-		hoofdagent = {},
+		hoofdagent = {
+			{model = 'swift', price = 0}
+		},
 
-		brigadier = {},
+		brigadier = {
+			{model = 'swift', price = 0}
+		},
 
-		inspecteur = {},
+		inspecteur = {
+			{model = 'swift', price = 0}
+		},
 
-		hoofdinspecteur = {},
+		hoofdinspecteur = {
+			{model = 'swift', price = 0}
+		},
 
-		commissaris = {},
+		commissaris = {
+			{model = 'swift', price = 0}
+		},
 
-		hoofdcommissaris = {},
+		hoofdcommissaris = {
+			{model = 'swift', price = 0}
+		},
 
-		boss = {}
+		boss = {
+			{model = 'swift', price = 0}
+		}
 	}
 }
 
@@ -261,12 +388,56 @@ Config.AuthorizedVehicles = {
 -- IN DE /CLIENT/MAIN.LUA AANPASSEN ANDERS JE ZAL GEGARANDEERD ERRORS KRIJGEN!!!
 --
 Config.Uniforms = {
+	asp_nh_kort = {
+		male = {
+			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
+			['torso_1'] = 93,   ['torso_2'] = 0,
+			['decals_1'] = 0,   ['decals_2'] = 0,
+			['arms'] = 0,
+			['pants_1'] = 46,   ['pants_2'] = 0,
+			['shoes_1'] = 24,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 0,    ['chain_2'] = 0,
+			['ears_1'] = -1,     ['ears_2'] = 0,
+			['bproof_1'] = 17,  ['bproof_2'] = 0,
+			['mask_1'] = 121,   ['mask_2'] = 0
+		},
+		female = {
+			['tshirt_1'] = 23,  ['tshirt_2'] = 0,
+			['torso_1'] = 148,   ['torso_2'] = 0,
+			['arms'] = 1,
+			['pants_1'] = 101,   ['pants_2'] = 1,
+			['shoes_1'] = 10,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['glasses_1'] = 5,  ['glasses_2'] = 0,
+			['ears_1'] = -1,     ['ears_2'] = 0,
+			['bproof_1'] = 0,  ['bproof_2'] = 0,
+			['mask_1'] = 121,   ['mask_2'] = 0
+		}
+	},
+
+	asp_nh_lang = {
+		male = {
+			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
+			['torso_1'] = 156,   ['torso_2'] = 0,
+			['decals_1'] = 0,   ['decals_2'] = 0,
+			['arms'] = 1,
+			['pants_1'] = 46,   ['pants_2'] = 0,
+			['shoes_1'] = 24,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 0,    ['chain_2'] = 0,
+			['ears_1'] = -1,     ['ears_2'] = 0,
+			['bproof_1'] = 17,  ['bproof_2'] = 0,
+			['mask_1'] = 121,   ['mask_2'] = 0
+		},
+	},
+
 	nh_kort = {
 		male = {
 			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
 			['torso_1'] = 93,   ['torso_2'] = 0,
 			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 41,
+			['arms'] = 0,
 			['pants_1'] = 46,   ['pants_2'] = 0,
 			['shoes_1'] = 24,   ['shoes_2'] = 0,
 			['helmet_1'] = -1,  ['helmet_2'] = 0,
@@ -294,11 +465,55 @@ Config.Uniforms = {
 			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
 			['torso_1'] = 156,   ['torso_2'] = 0,
 			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 44,
+			['arms'] = 1,
 			['pants_1'] = 46,   ['pants_2'] = 0,
 			['shoes_1'] = 24,   ['shoes_2'] = 0,
 			['helmet_1'] = -1,  ['helmet_2'] = 0,
 			['chain_1'] = 5,    ['chain_2'] = 0,
+			['ears_1'] = -1,     ['ears_2'] = 0,
+			['bproof_1'] = 17,  ['bproof_2'] = 0,
+			['mask_1'] = 121,   ['mask_2'] = 0
+		},
+	},
+
+	nh_kort_korpsleiding = {
+		male = {
+			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
+			['torso_1'] = 93,   ['torso_2'] = 0,
+			['decals_1'] = 0,   ['decals_2'] = 0,
+			['arms'] = 0,
+			['pants_1'] = 46,   ['pants_2'] = 0,
+			['shoes_1'] = 24,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 6,    ['chain_2'] = 0,
+			['ears_1'] = -1,     ['ears_2'] = 0,
+			['bproof_1'] = 17,  ['bproof_2'] = 0,
+			['mask_1'] = 121,   ['mask_2'] = 0
+		},
+		female = {
+			['tshirt_1'] = 23,  ['tshirt_2'] = 0,
+			['torso_1'] = 148,   ['torso_2'] = 0,
+			['arms'] = 0,
+			['pants_1'] = 101,   ['pants_2'] = 1,
+			['shoes_1'] = 10,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['glasses_1'] = 5,  ['glasses_2'] = 0,
+			['ears_1'] = -1,     ['ears_2'] = 0,
+			['bproof_1'] = 0,  ['bproof_2'] = 0,
+			['mask_1'] = 121,   ['mask_2'] = 0
+		}
+	},
+
+	nh_lang_korpsleiding = {
+		male = {
+			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
+			['torso_1'] = 156,   ['torso_2'] = 0,
+			['decals_1'] = 0,   ['decals_2'] = 0,
+			['arms'] = 1,
+			['pants_1'] = 46,   ['pants_2'] = 0,
+			['shoes_1'] = 24,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 6,    ['chain_2'] = 0,
 			['ears_1'] = -1,     ['ears_2'] = 0,
 			['bproof_1'] = 17,  ['bproof_2'] = 0,
 			['mask_1'] = 121,   ['mask_2'] = 0
@@ -310,7 +525,7 @@ Config.Uniforms = {
 			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
 			['torso_1'] = 93,   ['torso_2'] = 0,
 			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 41,
+			['arms'] = 0,
 			['pants_1'] = 46,   ['pants_2'] = 0,
 			['shoes_1'] = 24,   ['shoes_2'] = 0,
 			['helmet_1'] = -1,  ['helmet_2'] = 0,
@@ -338,11 +553,67 @@ Config.Uniforms = {
 			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
 			['torso_1'] = 156,   ['torso_2'] = 0,
 			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 44,
+			['arms'] = 1,
 			['pants_1'] = 46,   ['pants_2'] = 0,
 			['shoes_1'] = 24,   ['shoes_2'] = 0,
 			['helmet_1'] = -1,  ['helmet_2'] = 0,
 			['chain_1'] = 5,    ['chain_2'] = 0,
+			['ears_1'] = -1,     ['ears_2'] = 0,
+			['bproof_1'] = 17,  ['bproof_2'] = 2,
+			['mask_1'] = 121,   ['mask_2'] = 0
+		},
+		female = {
+			['tshirt_1'] = 35,  ['tshirt_2'] = 0,
+			['torso_1'] = 89,   ['torso_2'] = 0,
+			['arms'] = 46,
+			['pants_1'] = 61,   ['pants_2'] = 0,
+			['shoes_1'] = 25,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['glasses_1'] = 5,  ['glasses_2'] = 0,
+			['ears_1'] = -1,     ['ears_2'] = 0,
+			['bproof_1'] = 31,  ['bproof_2'] = 1,
+			['mask_1'] = 121,   ['mask_2'] = 0
+		}
+	},
+
+	vp_kort_korpsleiding = {
+		male = {
+			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
+			['torso_1'] = 93,   ['torso_2'] = 0,
+			['decals_1'] = 0,   ['decals_2'] = 0,
+			['arms'] = 0,
+			['pants_1'] = 46,   ['pants_2'] = 0,
+			['shoes_1'] = 24,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 6,    ['chain_2'] = 0,
+			['ears_1'] = -1,     ['ears_2'] = 0,
+			['bproof_1'] = 17,  ['bproof_2'] = 2,
+			['mask_1'] = 121,   ['mask_2'] = 0
+		},
+		female = {
+			['tshirt_1'] = 35,  ['tshirt_2'] = 0,
+			['torso_1'] = 85,   ['torso_2'] = 0,
+			['arms'] = 46,
+			['pants_1'] = 61,   ['pants_2'] = 0,
+			['shoes_1'] = 25,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['glasses_1'] = 5,  ['glasses_2'] = 0,
+			['ears_1'] = -1,     ['ears_2'] = 0,
+			['bproof_1'] = 31,  ['bproof_2'] = 1,
+			['mask_1'] = 121,   ['mask_2'] = 0
+		}
+	},
+
+	vp_lang_korpsleiding = {
+		male = {
+			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
+			['torso_1'] = 156,   ['torso_2'] = 0,
+			['decals_1'] = 0,   ['decals_2'] = 0,
+			['arms'] = 1,
+			['pants_1'] = 46,   ['pants_2'] = 0,
+			['shoes_1'] = 24,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 6,    ['chain_2'] = 0,
 			['ears_1'] = -1,     ['ears_2'] = 0,
 			['bproof_1'] = 17,  ['bproof_2'] = 2,
 			['mask_1'] = 121,   ['mask_2'] = 0
@@ -366,11 +637,11 @@ Config.Uniforms = {
 			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
 			['torso_1'] = 61,   ['torso_2'] = 0,
 			['decals_1'] = 1,   ['decals_2'] = 0,
-			['arms'] = 44,
+			['arms'] = 1,
 			['pants_1'] = 32,   ['pants_2'] = 1,
 			['shoes_1'] = 13,   ['shoes_2'] = 0,
 			['helmet_1'] = 17,  ['helmet_2'] = 0,
-			['chain_1'] = 6,    ['chain_2'] = 0,
+			['chain_1'] = 5,    ['chain_2'] = 0,
 			['ears_1'] = -1,     ['ears_2'] = 0,
 			['bproof_1'] = 0,  ['bproof_2'] = 0,
 			['mask_1'] = 121,   ['mask_2'] = 0
@@ -406,7 +677,7 @@ Config.Uniforms = {
 
 	ibt = {
 		male = {
-			['tshirt_1'] = 15,  ['tshirt_2'] = 0,
+			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
 			['torso_1'] = 51,   ['torso_2'] = 2,
 			['decals_1'] = 0,   ['decals_2'] = 0,
 			['arms'] = 0,
@@ -419,4 +690,48 @@ Config.Uniforms = {
 			['mask_1'] = 121,   ['mask_2'] = 0
 		}
 	},
+
+	--
+	-- UNIFORMEN VOOR F6 MENU
+	--
+	zwaar_vest = {
+		male = {
+			['decals_1'] = 44, ['decals_2'] = 0
+		}
+	},
+
+	steekvest = {
+		male = {
+			['bproof_1'] = 17,  ['bproof_2'] = 0,
+			['decals_1'] = 0, 	['decals_2'] = 0
+		}
+	},
+
+	steekvest_geel = {
+		male = {
+			['bproof_1'] = 17,  ['bproof_2'] = 2,
+			['decals_1'] = 0, 	['decals_2'] = 0
+		}
+	},
+
+	steekvest_uit = {
+		male = {
+			['bproof_1'] = 0, ['bproof_2'] = 0,
+			['decals_1'] = 0, ['decals_2'] = 0
+		}
+	},
+
+	hesje_geel = {
+		male = {
+			['bproof_1'] = 10, ['bproof_2'] = 2,
+			['decals_1'] = 0, ['decals_2'] = 0
+		}
+	},
+
+	hesje_ovdp = {
+		male = {
+			['bproof_1'] = 10, ['bproof_2'] = 3,
+			['decals_1'] = 0, ['decals_2'] = 0
+		}
+	}
 }

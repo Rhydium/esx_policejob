@@ -317,7 +317,7 @@ ESX.RegisterServerCallback('esx_policejob:buyWeapon', function(source, cb, weapo
 		if type == 1 then
 			if xPlayer.getMoney() >= selectedWeapon.price then
 				xPlayer.removeMoney(selectedWeapon.price)
-				xPlayer.addWeapon(weaponName, 100)
+				xPlayer.addWeapon(weaponName, 500)
 
 				cb(true)
 			else
@@ -351,27 +351,21 @@ ESX.RegisterServerCallback('esx_policejob:buyJobVehicle', function(source, cb, v
 	local xPlayer = ESX.GetPlayerFromId(source)
 	local price = getPriceFromHash(vehicleProps.model, xPlayer.job.grade_name, type)
 
-	-- vehicle model not found
-	if price == 0 then
-		print(('esx_policejob: %s attempted to exploit the shop! (invalid vehicle model)'):format(xPlayer.identifier))
-		cb(false)
-	else
-		if xPlayer.getMoney() >= price then
-			xPlayer.removeMoney(price)
+	if xPlayer.getMoney() >= price then
+		xPlayer.removeMoney(price)
 
-			MySQL.Async.execute('INSERT INTO owned_vehicles (owner, vehicle, plate, type, job, `stored`) VALUES (@owner, @vehicle, @plate, @type, @job, @stored)', {
-				['@owner'] = xPlayer.identifier,
-				['@vehicle'] = json.encode(vehicleProps),
-				['@plate'] = vehicleProps.plate,
-				['@type'] = type,
-				['@job'] = xPlayer.job.name,
-				['@stored'] = true
-			}, function (rowsChanged)
-				cb(true)
-			end)
-		else
-			cb(false)
-		end
+		MySQL.Async.execute('INSERT INTO owned_vehicles (owner, vehicle, plate, type, job, `stored`) VALUES (@owner, @vehicle, @plate, @type, @job, @stored)', {
+			['@owner'] = xPlayer.identifier,
+			['@vehicle'] = json.encode(vehicleProps),
+			['@plate'] = vehicleProps.plate,
+			['@type'] = type,
+			['@job'] = xPlayer.job.name,
+			['@stored'] = true
+		}, function (rowsChanged)
+			cb(true)
+		end)
+	else
+		cb(false)
 	end
 end)
 
