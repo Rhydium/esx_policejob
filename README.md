@@ -1,16 +1,16 @@
 # esx_policejob
 
-Deze resource voor ESX voegt politie wapenkamers, garages en de mogelijkheid voor agenten om mensen te fouilleren, boeien en nog veel meer.
+Deze resource voor ESX voegt politie wapenkamers, garages en de mogelijkheid voor agenten om mensen te fouilleren, boeien en nog veel meer toe.
 Bewerkt door [Rhydium](https://github.com/Rhydium) voor [RobuustBlauw! Roleplay](https://robuustblauw-rp.nl/discord).
 
 Origineel script: [esx_policejob by ESX-Org](https://github.com/ESX-Org/esx_policejob)
 
-### Benodigdheden
+## Benodigdheden
 * Auto mode
   * [esx_billing](https://github.com/ESX-Org/esx_billing)
   * [esx_vehicleshop](https://github.com/ESX-Org/esx_vehicleshop)
 
-* Player management (boss actions and armory with buyable weapons)
+* Speler management
   * [esx_addoninventory](https://github.com/ESX-Org/esx_addoninventory)
   * [esx_datastore](https://github.com/ESX-Org/esx_datastore)
   * [esx_society](https://github.com/ESX-Org/esx_society)
