@@ -1,9 +1,11 @@
 # esx_policejob
 
-This resource for ESX adds police armories, vehicle garages and ability for cops to search, handcuff people and much more.
+Deze resource voor ESX voegt politie wapenkamers, garages en de mogelijkheid voor agenten om mensen te fouilleren, boeien en nog veel meer.
 Bewerkt door [Rhydium](https://github.com/Rhydium) voor [RobuustBlauw! Roleplay](https://robuustblauw-rp.nl/discord).
 
-### Requirements
+Origineel script: [esx_policejob by ESX-Org](https://github.com/ESX-Org/esx_policejob)
+
+### Benodigdheden
 * Auto mode
   * [esx_billing](https://github.com/ESX-Org/esx_billing)
   * [esx_vehicleshop](https://github.com/ESX-Org/esx_vehicleshop)
@@ -25,22 +27,28 @@ Bewerkt door [Rhydium](https://github.com/Rhydium) voor [RobuustBlauw! Roleplay]
 * Nederlandse EUP Pack van ModdingNederland
   * [Realistic Dutch EUP Pack](https://www.gta5-mods.com/player/realistic-dutch-eup-pack)
 
-## Download & Installation
+* Gevangenis straffen (esx-qalle-jail)
+  * [esx-qalle-jail](https://github.com/qalle-fivem/esx-qalle-jail)
 
-### Using Git
+* Taakstraffen (esx_communityservice)
+  * [esx_communityservice](https://github.com/ATG-Github/ESX_CommunityService)
+
+## Download & Installatie
+
+### Git
 ```
 cd resources
 git clone https://github.com/Rhydium/esx_policejob [esx]/esx_policejob
 ```
 
-### Manually
+### Handmatig
 - Download https://github.com/Rhydium/esx_policejob/archive/master.zip
 - Put it in the `[esx]` directory
 
 
-## Installation
-- Import `nl_esx_policejob.sql` in your database
-- Add this to your server.cfg:
+## Installatie
+- Importeer `nl_esx_policejob.sql` in je database
+- Voeg dit toe aan je server.cfg:
 
 ```
 start esx_policejob
