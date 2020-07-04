@@ -6,6 +6,7 @@ if Config.EnableESXService then
 	TriggerEvent('esx_service:activateService', 'police', Config.MaxInService)
 end
 
+TriggerEvent('esx_phone:registerNumber', 'police', 'Police', true, true)
 TriggerEvent('esx_society:registerSociety', 'police', 'Police', 'society_police', 'society_police', 'society_police', {type = 'public'})
 
 RegisterNetEvent('esx_policejob:confiscatePlayerItem')

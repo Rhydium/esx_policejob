@@ -17,7 +17,7 @@ Config.EnableJobBlip              = true -- enable blips for cops on duty, requi
 Config.EnableCustomPeds           = false -- enable custom peds in cloak room? See Config.CustomPeds below to customize peds
 
 Config.EnableESXService           = true -- enable esx service?
-Config.MaxInService               = 10
+Config.MaxInService               = 15
 
 Config.Locale                     = 'nl'
 
@@ -61,7 +61,7 @@ Config.PoliceStations = {
 					{coords = vector3(484.1, -1023.1, 27.5), heading = 302.5, radius = 6.0}
 				}
 			}
-		}, -- Tijdelijk niet ingesteld omdat we esx_policegarage gebruiken
+		},
 
 		Helicopters = {
 			{
@@ -71,7 +71,7 @@ Config.PoliceStations = {
 					{coords = vector3(449.5, -981.2, 43.6), heading = 92.6, radius = 10.0}
 				}
 			}
-		}, -- Tijdelijk niet ingesteld omdat we esx_policegarage gebruiken
+		},
 
 		BossActions = {
 			vector3(448.4, -973.2, 30.6)
@@ -102,6 +102,7 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
+		{weapon = 'WEAPON_SMG', components = {nil, nil, nil, nil, 0}, price = 0}
 	},
 
 	hoofdagent = {
@@ -110,7 +111,8 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0},
+		{weapon = 'WEAPON_SMG', components = {nil, nil, nil, nil, 0}, price = 0}
 	},
 
 	brigadier = {
@@ -119,7 +121,8 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0},
+		{weapon = 'WEAPON_SMG', components = {nil, nil, nil, nil, 0}, price = 0}
 	},
 
 	inspecteur = {
@@ -128,7 +131,8 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0},
+		{weapon = 'WEAPON_SMG', components = {nil, nil, nil, nil, 0}, price = 0}
 	},
 
 	hoofdinspecteur = {
@@ -137,7 +141,8 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0},
+		{weapon = 'WEAPON_SMG', components = {nil, nil, nil, nil, 0}, price = 0}
 	},
 
 	commissaris = {
@@ -146,7 +151,8 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0},
+		{weapon = 'WEAPON_SMG', components = {nil, nil, nil, nil, 0}, price = 0}
 	},
 
 	hoofdcommissaris = {
@@ -155,7 +161,8 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0},
+		{weapon = 'WEAPON_SMG', components = {nil, nil, nil, nil, 0}, price = 0}
 	},
 
 	boss = {
@@ -164,7 +171,8 @@ Config.AuthorizedWeapons = {
 		{weapon = 'WEAPON_FLASHLIGHT', price = 0},
 		{weapon = 'WEAPON_FIREEXTINGUISHER', price = 0},
 		{weapon = 'WEAPON_PISTOL', price = 0},
-		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0}
+		{weapon = 'WEAPON_CARBINERIFLE', components = {0, nil, nil, 0, 0, 0}, price = 0},
+		{weapon = 'WEAPON_SMG', components = {nil, nil, nil, nil, 0}, price = 0}
 	},
 }
 
@@ -675,6 +683,49 @@ Config.Uniforms = {
 		}
 	},
 
+	recherche = {
+		male = {
+			['tshirt_1'] = 10, ['tshirt_2'] = 0,
+			['torso_1'] = 35, ['torso_2'] = 0,
+			['bproof_1'] = 20, ['bproof_2'] = 0,
+			['chain_1'] = 5, ['chain_2'] = 0,
+			['pants_1'] = 4, ['pants_2'] = 0,
+			['shoes_1'] = 2, ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['ears_1'] = -1, ['ears_2'] = 0,
+			['mask_1'] = 11, ['mask_2'] = 0
+		}
+	},
+
+	dsi = {
+		male = {
+			['tshirt_1'] = 37, ['tshirt_2'] = 0,
+			['torso_1'] = 50, ['torso_2'] = 0,
+			['bproof_1'] = 12, ['bproof_2'] = 2,
+			['chain_1'] = 6, ['chain_2'] = 0,
+			['pants_1'] = 26, ['pants_2'] = 4,
+			['shoes_1'] = 2, ['shoes_2'] = 0,
+			['helmet_1'] = 119,  ['helmet_2'] = 0,
+			['ears_1'] = -1, ['ears_2'] = 0,
+			['mask_1'] = 52, ['mask_2'] = 0
+		}
+	},
+
+	arrestatieteam = {
+		male = {
+			['tshirt_1'] = 37, ['tshirt_2'] = 0,
+			['torso_1'] = 31, ['torso_2'] = 2,
+			['bproof_1'] = 0, ['bproof_2'] = 0,
+			['chain_1'] = 6, ['chain_2'] = 0,
+			['arms'] = 41,
+			['pants_1'] = 4, ['pants_2'] = 0,
+			['shoes_1'] = 2, ['shoes_2'] = 0,
+			['helmet_1'] = 28,  ['helmet_2'] = 1,
+			['ears_1'] = -1, ['ears_2'] = 0,
+			['mask_1'] = 11, ['mask_2'] = 0
+		}
+	},
+
 	ibt = {
 		male = {
 			['tshirt_1'] = 37,  ['tshirt_2'] = 0,
@@ -731,6 +782,13 @@ Config.Uniforms = {
 	hesje_ovdp = {
 		male = {
 			['bproof_1'] = 10, ['bproof_2'] = 3,
+			['decals_1'] = 0, ['decals_2'] = 0
+		}
+	},
+
+	at_vest = {
+		male = {
+			['bproof_1'] = 12, ['bproof_2'] = 3,
 			['decals_1'] = 0, ['decals_2'] = 0
 		}
 	}
