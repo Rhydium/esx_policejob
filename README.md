@@ -3,10 +3,12 @@
 Deze resource voor ESX voegt politie wapenkamers, garages en de mogelijkheid voor agenten om mensen te fouilleren, boeien en nog veel meer toe.
 Bewerkt door [Rhydium](https://github.com/Rhydium).
 
-Origineel script: [esx_policejob by ESX-Org](https://github.com/ESX-Org/esx_policejob)
+Helpen met dit script? Maak een PR! We hebben nog hulp nodig met de Nederlandse boetes in de sql file.
+
+Origineel script: [esx_policejob by esx-framework](https://github.com/esx-framework/esx_policejob)
 
 ## Benodigdheden
-* Auto mode
+* Automatische modus
   * [esx_billing](https://github.com/ESX-Org/esx_billing)
   * [esx_vehicleshop](https://github.com/ESX-Org/esx_vehicleshop)
 
@@ -26,6 +28,7 @@ Origineel script: [esx_policejob by ESX-Org](https://github.com/ESX-Org/esx_poli
 
 * Nederlandse EUP Pack van ModdingNederland
   * [Realistic Dutch EUP Pack](https://www.gta5-mods.com/player/realistic-dutch-eup-pack)
+  * Dit klopt niet helemaal, je zal nog wat nummers moeten aanpassen.
 
 * Gevangenis straffen (esx-qalle-jail)
   * [esx-qalle-jail](https://github.com/qalle-fivem/esx-qalle-jail)
@@ -43,7 +46,7 @@ git clone https://github.com/Rhydium/esx_policejob [esx]/esx_policejob
 
 ### Handmatig
 - Download https://github.com/Rhydium/esx_policejob/archive/master.zip
-- Put it in the `[esx]` directory
+- Plaats het in de map `resources/[esx]`
 
 
 ## Installatie
@@ -54,10 +57,10 @@ git clone https://github.com/Rhydium/esx_policejob [esx]/esx_policejob
 start esx_policejob
 ```
 
--  * If you want player management you have to set `Config.EnablePlayerManagement` to `true` in `config.lua`
-   * If you want armory management you have to set `Config.EnableArmoryManagement` to `true` in `config.lua`
-   * If you want license management you have to set `Config.EnableLicenses` to `true` in `config.lua`
-   * If you want service management you have to set `Config.MaxInService` to a higher value than `-1` in `config.lua`
+   * Als je gebruikt wilt maken van player management moet je `Config.EnablePlayerManagement` naar `true` zetten in de `config.lua`
+   * Als je gebruikt wilt maken van armory management moet je `Config.EnableArmoryManagement` naar `true` zetten in de `config.lua`
+   * Als je gebruikt wilt maken van license management moet je `Config.EnableLicenses` naar `true` zetten in de `config.lua`
+   * Als je gebruikt wilt maken van service management moet je `Config.EnableESXService` naar `true` zetten in de `config.lua`
 
 # Legal
 ### License
