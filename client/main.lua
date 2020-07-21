@@ -193,7 +193,7 @@ function OpenCloakroomMenu()
 		cleanPlayer(playerPed)
 
 		if data.current.value == 'citizen_wear' then
-			if Config.EnableNonFreemodePeds then
+			if Config.EnableCustomPeds then
 				ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
 					local isMale = skin.sex == 0
 
@@ -1347,7 +1347,7 @@ AddEventHandler('esx_policejob:OutVehicle', function()
 
 	if IsPedSittingInAnyVehicle(playerPed) then
 		local vehicle = GetVehiclePedIsIn(playerPed, false)
-		TaskLeaveVehicle(playerPed, vehicle, 16)
+		TaskLeaveVehicle(playerPed, vehicle, 64)
 	end
 end)
 

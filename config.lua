@@ -7,17 +7,17 @@ Config.MarkerColor                = {r = 50, g = 50, b = 204}
 
 Config.EnablePlayerManagement     = true
 Config.EnableArmoryManagement     = true
-Config.EnableESXIdentity          = true -- enable if you're using esx_identity
-Config.EnableLicenses             = true -- enable if you're using esx_license
+Config.EnableESXIdentity          = true -- Zet op true als je esx_identity gebruikt
+Config.EnableLicenses             = true -- Zet op true als je esx_license gebruikt
 
-Config.EnableHandcuffTimer        = true -- enable handcuff timer? will unrestrain player after the time ends
-Config.HandcuffTimer              = 10 * 60000 -- 10 mins
+Config.EnableHandcuffTimer        = true -- HandcuffTimer aan? Dit zorgt er voor dat handboeien automatisch af gaan
+Config.HandcuffTimer              = 10 * 60000 -- 10 minuten
 
-Config.EnableJobBlip              = true -- enable blips for cops on duty, requires esx_society
-Config.EnableCustomPeds           = false -- enable custom peds in cloak room? See Config.CustomPeds below to customize peds
+Config.EnableJobBlip              = true -- Blips voor agenten in dienst (esx_society is nodig voor deze functie)
+Config.EnableCustomPeds           = false -- Custom peds in de kleedkamer? Zie Config.CustomPeds
 
-Config.EnableESXService           = true -- enable esx service?
-Config.MaxInService               = 15
+Config.EnableESXService           = true -- Zet op true als je esx_service wilt gebruiken
+Config.MaxInService               = -1
 
 Config.Locale                     = 'nl'
 
