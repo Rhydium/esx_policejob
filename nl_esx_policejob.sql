@@ -21,7 +21,7 @@ INSERT INTO `job_grades` (job_name, grade, name, label, salary, skin_male, skin_
 	('police',1,'surveillant','Surveillant',0,'{}','{}'),
 	('police',2,'agent','Agent',0,'{}','{}'),
 	('police',3,'hoofdagent','Hoofdagent',0,'{}','{}'),
-	('police',4,'brigadier','Chief',0,'{}','{}'),
+	('police',4,'brigadier','Brigadier',0,'{}','{}'),
     ('police',5,'inspecteur','Inspecteur',0,'{}','{}'),
     ('police',6,'hoofdinspecteur','Hoofdinspecteur',0,'{}','{}'),
     ('police',7,'commissaris','Commissaris',0,'{}','{}'),
